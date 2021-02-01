@@ -76,7 +76,7 @@ class _GamepageState extends State<Gamepage> {
   }
 
   Object definitiveDialogue(int playerMark){
-    String result = (playerMark == 0)? 'Lossed..' : 'Win!';
+    String result = (playerMark == 0)? 'Lossed..' : 'Won!';
     gameOver = true;
     showDialog(
         context: context,
@@ -150,7 +150,7 @@ class _GamepageState extends State<Gamepage> {
                               blurRadius: 20.0,
                               spreadRadius: 5.0,
                             )
-                            //offset: Offset(10.0, 20.0))
+                            
                           ]),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -182,18 +182,9 @@ class _GamepageState extends State<Gamepage> {
                                         ),
                                         onPressed: () {
                                           setState(() {
-                                            /*if (BoardState.board[i][j] == null &&
-                                               BoardState.turn % 2 == 0) {
-                                             AI_makeYourMove();
-                                             dialogueGameOver(0);
-                                           } else if (BoardState.board[i][j] ==
-                                               null &&
-                                               BoardState.turn % 2 == 1) {*/
+                                           
                                             handleGameLoop(i, j);
-                                            //print(BoardState.board);
-                                            //}
-                                            //handleGameLoop(i,j);
-                                            //print(BoardState.board);
+                                            
                                           });
                                         },
                                       ),
